@@ -1,0 +1,10 @@
+<dnsi>
+	<link src="./Classes.cs" />
+	<link src="./TCPServer.cs" />
+	<link src="./WebSocketClient.cs" />
+	<link src="./WebSocketServer.cs" />
+	<link src="./Handlers/Handler.cs" />
+	<link src="./Handlers/WebSocket/hybi00.cs" />
+	<link src="./Handlers/WebSocket/hybi10.cs" />
+	<link src="./Handlers/WebSocket/WebSocketHandler.cs" />
+</dnsi>

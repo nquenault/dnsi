@@ -1,0 +1,7 @@
+<dnsi>
+	<target value="winexe" />
+	<entrypoint value="InternetHostSearcher.Program" />
+	<link src="./Program.cs" />
+	<link src="./Main.cs" />
+	<link src="./Main.Designer.cs" />
+</dnsi>

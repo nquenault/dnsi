@@ -1,0 +1,11 @@
+<dnsi>
+	<target value="winexe" />
+	<entrypoint value="VegediaChatMessageForger.Program" />
+	<link src="./Program.cs" />
+	<link src="./Main.cs" />
+	<link src="./Main.Designer.cs" />
+	<link src="./Utility.cs" />
+	<link src="./VegediaAPI.cs" />
+	<link src="./VegediaBuddy.cs" />
+	<link src="./WebClientEx.cs" />
+</dnsi>

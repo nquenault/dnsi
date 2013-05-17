@@ -1,0 +1,112 @@
+'-------------------------------------------
+'<dnsi>
+'	<target value="winexe" />
+'	<autorun value="true" />
+'	<entrypoint value="Program" />
+'	<link src="https://dnsi.googlecode.com/svn/libraries/Alchemy/" />
+'</dnsi>
+'-------------------------------------------
+
+Imports System.Net
+
+Public Class Program
+    Inherits Form
+
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Private components As System.ComponentModel.IContainer
+    Private _wss as Alchemy.WebSocketServer
+
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+
+	Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 36)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(402, 20)
+        Me.TextBox1.TabIndex = 0
+
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Input :"
+
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(426, 68)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Name = "Form1"
+        Me.Text = "dnsi - PoC - WebBrowser Interact Real-Time"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+    End Sub
+
+    private m_Context as Alchemy.Classes.UserContext
+
+    Public Sub New()
+	InitializeComponent()
+
+	_wss = new Alchemy.WebSocketServer(8181, IPAddress.Any)
+	
+	_wss.OnReceive = sub(context as Alchemy.Classes.UserContext)
+			'msgbox("receiv : " & context.DataFrame.ToString())
+			dim data = context.DataFrame.ToString()
+			if not data.Contains(chr(10)) andalso not data.contains(chr(13)) then
+				dim proc = sub()
+					TextBox1.text = data
+					textbox1.selectionstart = textbox1.textlength
+				End sub
+
+				if TextBox1.invokerequired then
+					TextBox1.invoke(proc)
+				else
+					proc()
+				end if
+			end if
+		end sub
+		
+	_wss.OnSend = sub(context as Alchemy.Classes.UserContext)
+			'msgbox("data sent")
+		end sub
+		
+	_wss.OnConnected = sub(context as Alchemy.Classes.UserContext)
+		m_Context = context
+			'msgbox("client connected (" & context.ClientAddress.ToString() & ")")
+		end sub
+		
+	_wss.OnDisconnect = sub(context as Alchemy.Classes.UserContext)
+			'msgbox("disconnected")
+		end sub
+
+	_wss.Start()
+
+	Process.Start("http://dnsi.nquenault.fr/examples/WebBrowser-Interact-RealTime/", String.Empty)
+    End Sub
+
+    Private Sub TextBox1_KeyUp(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyUp
+	if not isnothing(m_Context) andalso not isnothing(textbox1.text) then
+		m_Context.Send(textbox1.text)
+	end if
+    End Sub
+
+End Class

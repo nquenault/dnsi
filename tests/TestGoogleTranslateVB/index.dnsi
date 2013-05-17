@@ -1,0 +1,7 @@
+<dnsi>
+	<entrypoint value="Main">
+	<target value="winexe">
+	<link src="./Main.Designer.vb">
+	<link src="./Main.vb">
+	<link src="https://dnsi.googlecode.com/svn/libraries/GoogleTranslate/GoogleTranslate.vb">
+</dnsi>

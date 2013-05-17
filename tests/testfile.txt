@@ -1,0 +1,44 @@
+/*
+http://dnsi.googlecode.com/svn/trunk/testfile.txt
+
+<dnsi>
+  <target value="exe" /> <!-- use the form to change the target to "Memory" ;) -->
+  <entrypoint value="testns.testc.testmethod" />
+  <arguments value="Hello!" />
+  <autorun value="true" />
+  <output value="test.exe" />
+  <!--<link src="http://pastebin.com/raw.php?i=ujLHw6f7" />-->
+  <!--<link src="http://pastebin.com/raw.php?i=5GtuPGgD" />-->
+</dnsi>
+
+target values library/exe/winexe/run
+library create dll
+exe create console application
+winexe create windows application
+memory for dynamic usage
+
+if autorun is set to true, then DNSI will run generated exe
+
+*/
+
+namespace testns
+{
+  public class testc
+  {
+    public static void Main(string[] args)
+    {   
+      Console.WriteLine("Hello World !");
+      Console.ReadLine();
+    }
+    
+    public static void testmethod(string MyString)
+    {
+      MessageBox.Show(MyString);
+    }
+    
+    public static string testmethod2(string MyString)
+    {
+      return "*return testmethod2 from http RULZ !!!!!!!!!!!!!!! * " + MyString.ToUpper();
+    }
+  }
+}
