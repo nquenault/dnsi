@@ -27,9 +27,13 @@ static class Utility
 	private static class Generator
 	{
 		private static readonly Random _random = new Random();
-		public static int Rand(int max = 100, int min = 0) { _random.Next(min, max + 1); return _random.Next(min, max + 1); }
+		public static int Rand(int max = 100, int min = 0) { return _random.Next(min, max + 1); }
 	}
 	public static int Rand(int max = 100, int min = 0) { return Generator.Rand(max, min); }
+	public static T Rand<T>(IEnumerable<T> items)
+	{
+		return items.ElementAt(Utility.Rand(items.Count() - 1, 0));
+	}
 
 	public static void TryInvoke(Control control, Delegate method)
 	{
