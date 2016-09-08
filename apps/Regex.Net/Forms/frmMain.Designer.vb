@@ -445,13 +445,13 @@ Partial Class frmMain
         Me.picIsMatchResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         'Me.picIsMatchResult.Image = My.Resources.Resources.lighton
 
-		GetImageByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/Resources/lighton.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lighton.PNG",
 			sub(image as image)
 				Me.picIsMatchResult.Image = image
 			End sub
 		)
 
-		GetIconByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/icons/regex.ico",
+		GetIconByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/icons/regex.ico",
 			sub(icon as icon)
 				me.icon = icon
 			end sub
@@ -656,7 +656,7 @@ Partial Class frmMain
         Me.ImageList1.TransparentColor = System.Drawing.Color.White
         'Me.ImageList1.Images.SetKeyName(0, "fct.PNG")
         'Me.ImageList1.Images.SetKeyName(1, "prop.PNG")
-		GetImageByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/Resources/fct.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/fct.PNG",
 			sub(image as image)
 				Me.ImageList1.Images.Add(0, image)
 				Me.tabReplace.refresh()
@@ -675,7 +675,7 @@ Partial Class frmMain
 			End sub
 		)
 
-		'GetImageByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/Resources/lighton.PNG",
+		'GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lighton.PNG",
 		'	sub(image as image)
 		'		Me.picIsMatchResult.Image = image
 		'	End sub
@@ -1189,7 +1189,7 @@ Partial Class frmMain
         'ExecuterToolStripMenuItem
         '
         'Me.ExecuterToolStripMenuItem.Image = My.Resources.Resources.run
-		GetImageByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/Resources/run.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/run.PNG",
 			sub(image as image)
 				Me.ExecuterToolStripMenuItem.Image = image
 			End sub
@@ -1459,7 +1459,7 @@ Partial Class frmMain
         '
         Me.ToolStripButtonCultureInvariant.CheckOnClick = True
         'Me.ToolStripButtonCultureInvariant.Image = My.Resources.Resources.struc
-		GetImageByUri("http://dnsi.googlecode.com/svn/apps/Regex.Net/Resources/struc.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/struc.PNG",
 			sub(image as image)
 				Me.ToolStripButtonCultureInvariant.Image = image
 				Me.ToolStripButtonExplicitCapture.Image = image
