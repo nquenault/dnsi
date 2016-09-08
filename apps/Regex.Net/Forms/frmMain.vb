@@ -10,7 +10,7 @@ Public Class frmMain
     Private AskMatchUpdate As Boolean = False
     Private AskSplitUpdate As Boolean = False
 
-    Private UpdateOnChanges A Boolean = True
+    Private UpdateOnChanges As Boolean = True
 
 	Private m_frmMinijeu as frmMinijeu
 	private m_frmMemento as frmMemento
