@@ -1,1 +1,1 @@
-[Run dnsi AppStore Now](http://dnsi.nquenault.fr/exec.php?url=https://raw.githubusercontent.com/nquenault/dnsi/master/apps/AppStore/index.dnsi)
+[Run dnsi AppStore Now](http://x.nqs.fr/?u=http://rawgitn.nqs.fr/dnsi/master/apps/AppStore/index.dnsi)
