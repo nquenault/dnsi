@@ -90,7 +90,7 @@ Module NETExtensions
 		)
 	end sub
 
-	Public Sub TryInvoke(invoker As Windows.Forms.Control, action As Action)
+	Public Sub TryInvoke(invoker As System.Windows.Forms.Control, action As Action)
         If invoker.InvokeRequired Then
             Try
                 invoker.Invoke(action)
@@ -363,7 +363,7 @@ Module NETExtensions
         Return result
     End Function
 
-    Private VariableColumnsList As New Dictionary(Of String, Windows.Forms.ColumnHeader)
+    Private VariableColumnsList As New Dictionary(Of String, System.Windows.Forms.ColumnHeader)
 
     <Extension()>
     Public Function SetVariableColumnWidth(value As ListView,
@@ -375,7 +375,7 @@ Module NETExtensions
             VariableColProvertyValueFilter = VariableColProvertyValueFilter.ToLower
         End If
 
-        For Each col As Windows.Forms.ColumnHeader In value.Columns
+        For Each col As System.Windows.Forms.ColumnHeader In value.Columns
             Dim propValue = ObjectPropertyValue(col, VariableColPropertyIdentification, "").ToString
 
             If Not CaseSensitive Then
