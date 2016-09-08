@@ -16,8 +16,7 @@ namespace dnsi_AppStore
         {
             get {
                 if (listView1.SelectedItems.Count > 0)
-                    return "dnsi://dnsi.googlecode.com/svn/apps/" +
-                        listView1.SelectedItems[0].SubItems[0].Text + "/";
+                    return Regex.Replace(listView1.SelectedItems[0].SubItems[1].Text, @"^(https?://)(www\.)?github\.com/([^/]+)/([^/]+)/tree/(.+)", "dnsi://github.com/$3/$4/raw/$5/index.dnsi");
                 else
                     return "";
             }
@@ -28,8 +27,7 @@ namespace dnsi_AppStore
             get
             {
                 if (listView1.SelectedItems.Count > 0)
-                    return "https://code.google.com/p/dnsi/source/browse/apps/" +
-                        Uri.EscapeUriString(listView1.SelectedItems[0].SubItems[0].Text) + "/";
+                    return listView1.SelectedItems[0].SubItems[1].Text;
                 else
                     return "";
             }
@@ -56,7 +54,7 @@ namespace dnsi_AppStore
             Application.EnableVisualStyles();
             InitializeComponent();
 
-            this.Text = "dnsi - AppStore v0.0.1";
+            this.Text = "dnsi - AppStore v0.0.2";
             this.Resize += delegate { ResizeCol(); };
             this.Load += delegate { ResizeCol(); };
             listView1.MouseDoubleClick += delegate { runToolStripMenuItem_Click(null, null); };
@@ -67,28 +65,20 @@ namespace dnsi_AppStore
 
             using (var ws = new WebClient())
             {
-                var html = ws.DownloadString("http://code.google.com/p/dnsi/source/browse/apps");
+                var html = ws.DownloadString("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/dnsi.repo");
 
-                var matches = Regex.Matches(
-                    html,
-                    "<span onclick=\"selectDirClick\\(this\\)\"><a onclick=\"return false\" href=\"apps/([^\"]+)\">([^<]+)</a></span>",
-                    RegexOptions.IgnoreCase
-                );
+                var matches = Regex.Matches(html, "^([^=]+)=(.+)", RegexOptions.Multiline);
 
-                foreach(Match match in matches)
+                foreach (Match match in matches)
                 {
-                    var appName = match.Groups[2].Value;
-                    var browseUri = match.Groups[1].Value;
+                    var appName = match.Groups[1].Value;
+                    var browseUri = match.Groups[2].Value;
 
-                    //if (appName != "dnsi - AppStore")
-                    //{
-                        var item = new ListViewItem();
-                        item.Text = appName;
-                        item.SubItems.Add("https://dnsi.googlecode.com/svn/apps/" + appName + "/");
+                    var item = new ListViewItem();
+                    item.Text = appName;
+                    item.SubItems.Add(Uri.UnescapeDataString(browseUri)); //"https://dnsi.googlecode.com/svn/apps/" + appName + "/");
 
-                        listView1.Items.Add(item);
-                    //}
-                }
+                    listView1.Items.Add(item);
             }
 
             listView1.Visible = true;
