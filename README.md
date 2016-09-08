@@ -4,8 +4,6 @@ Current version : 0.0.1.4 (jan 29th 2013)
 
 Download Now !
 
-How to create a shortcut
-
 **What is DNSI ?**
 
 DNSI is a application that can compile files from various locations (local, network, internet) both in CSharp and VB.NET to library (dll), console application, windows application or into memory, and execute it.
