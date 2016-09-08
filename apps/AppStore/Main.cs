@@ -79,6 +79,7 @@ namespace dnsi_AppStore
                     item.SubItems.Add(Uri.UnescapeDataString(browseUri)); //"https://dnsi.googlecode.com/svn/apps/" + appName + "/");
 
                     listView1.Items.Add(item);
+                }
             }
 
             listView1.Visible = true;
