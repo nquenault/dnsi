@@ -75,11 +75,11 @@ Module NETExtensions
 	end sub
 
 	Public Sub GetImageByUri(uri as string, callback as action(of image))
-		GetFileContentStreamByUri(new uri(uri),
-			sub(stream as io.stream)
-				callback(System.Drawing.Bitmap.FromStream(stream))
-			end sub
-		)
+		'GetFileContentStreamByUri(new uri(uri),
+		'	sub(stream as io.stream)
+		'		callback(System.Drawing.Bitmap.FromStream(stream))
+		'	end sub
+		')
 	end sub
 
 	Public Sub GetIconByUri(uri as string, callback as action(of icon))
