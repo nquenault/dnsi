@@ -1,5 +1,5 @@
 <dnsi>
-	<target value="winexe" />
+	<target value="memory" />
 	<autorun value="true" />
 	<entrypoint value="dnsi_AppStore.Program" />
 	<link src="./Program.cs" />
