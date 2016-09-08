@@ -62,6 +62,8 @@ Module NETExtensions
 			Sub()
 				dim webclient as new system.net.webclient()
 				dim result as string = webclient.DownloadString(uri)
+				
+				msgbox(result)
 
 				try
 					Dim stream as New IO.StreamWriter(New IO.MemoryStream(System.Text.Encoding.Default.GetBytes(result)))
