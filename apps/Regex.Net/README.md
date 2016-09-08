@@ -1,1 +1,1 @@
-[Run it !](http://dnsi.nquenault.fr/exec.php?url=https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/index.dnsi) ([with debug](http://dnsi.nquenault.fr/exec.php?debug=true&url=https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/index.dnsi))
+[Run it !](http://x.nqs.fr/?u=https://rawgitn.nqs.fr/dnsi/master/apps/Regex.Net/index.dnsi) ([with debug](http://x.nqs.fr/?u=https://rawgitn.nqs.fr/dnsi/master/apps/Regex.Net/index.dnsi&debug=1))
