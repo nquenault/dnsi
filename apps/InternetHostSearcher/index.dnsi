@@ -1,5 +1,6 @@
 <dnsi>
 	<target value="winexe" />
+	<autorun value="true" />
 	<entrypoint value="InternetHostSearcher.Program" />
 	<link src="./Program.cs" />
 	<link src="./Main.cs" />
