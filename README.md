@@ -1,8 +1,8 @@
 # .NET Script Interpreter
 
-Current version : 0.0.1.4 (jan 29th 2013)
+Current version : 0.2 (sept 8th 2016)
 
-Download Now !
+Download Link : http://nqs.fr/ehhQo6UHKj
 
 **What is DNSI ?**
 
