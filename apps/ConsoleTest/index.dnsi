@@ -1,5 +1,6 @@
 <dnsi>
 	<target value="exe" />
+	<autorun value="true" />
 	<arguments value="http://dnsi.nquenault.fr/examples/ConsoleTest/callback.php?name=" />
 	<link src="http://dnsi.nquenault.fr/examples/ConsoleTest/index.php?from=dnsi" />
 </dnsi>
