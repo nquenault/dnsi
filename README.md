@@ -6,23 +6,23 @@ Download Now !
 
 How to create a shortcut
 
-What is DNSI ?
+**What is DNSI ?**
 
 DNSI is a application that can compile files from various locations (local, network, internet) both in CSharp and VB.NET to library (dll), console application, windows application or into memory, and execute it.
 
-Why use DNSI ?
+**Why use DNSI ?**
 
-1) There is no need Visual Studio to make .NET softwares.
+1) There is **no need Visual Studio** to make .NET softwares.
 
-2) There is no need to (re)compile your software and no need to make update patch.
+2) There is **no need to (re)compile** your software and **no need to make update patch**.
 
-3) If you put your source code on the web, there is no need for user to download any exe else DNSI (currently ~350Ko).
+3) If you put your source code on the web, there is **no need for user to download any exe** but DNSI (currently ~350Ko).
 
-4) Final user is always up to date with your software.
+4) Final user is **always up to date** with your software.
 
 5) Integrate Console App and Windows Forms App interaction with your website(s).
 
-Cool, but, have you an example?
+**Cool, but, have you an example?**
 
 Imagine context as the following :
 
@@ -83,7 +83,7 @@ Then, to exec c:\HomeDev\Project1\Program.cs, just type this command line :
 
 Then showing a message box with "IT'S 2011-08-23 22:05:07" ! ;)
 
-Another example ?
+**Another example ?**
 
 A Windows Forms Web Application !
 
@@ -115,7 +115,7 @@ Namespace TestDNSI
 End Namespace
 ```
 
-Omagod, more examples plz!
+**Omagod, more examples plz!**
 
 Yeah! a Windows Forms Web Application with callback !!
 
