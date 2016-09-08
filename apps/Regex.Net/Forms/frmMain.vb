@@ -49,6 +49,8 @@ Public Class frmMain
 	public sub new()
 		Application.EnableVisualStyles()
 		InitializeComponent()
+		
+		msgbox("here")
       
       try
         SetParent(Me.Handle, val("%owner%"))
