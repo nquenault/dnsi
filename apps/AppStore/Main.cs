@@ -67,7 +67,7 @@ namespace dnsi_AppStore
             {
                 var html = ws.DownloadString("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/dnsi.repo");
 
-                var matches = Regex.Matches(html, "^([^=]+)=(.+)", RegexOptions.Multiline);
+                var matches = Regex.Matches(html, "^([^#][^=]+)=(.+)", RegexOptions.Multiline);
 
                 foreach (Match match in matches)
                 {
