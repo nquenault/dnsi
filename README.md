@@ -4,6 +4,8 @@ Current version : 0.2 (sept 8th 2016)
 
 Download Link : http://nqs.fr/ehhQo6UHKj
 
+[Run dnsi AppStore](http://x.nqs.fr/?u=http://rawgitn.nqs.fr/dnsi/master/apps/AppStore/)
+
 **What is DNSI ?**
 
 DNSI is a application that can compile files from various locations (local, network, internet) both in CSharp and VB.NET to library (dll), console application, windows application or into memory, and execute it.
