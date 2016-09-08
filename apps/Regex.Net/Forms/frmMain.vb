@@ -47,10 +47,10 @@ Public Class frmMain
 	private m_lightbrokenb as system.drawing.image
    
 	public sub new()
+		msgbox("here")
 		Application.EnableVisualStyles()
 		InitializeComponent()
 		
-		msgbox("here")
       
       try
         SetParent(Me.Handle, val("%owner%"))
