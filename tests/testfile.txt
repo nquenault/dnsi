@@ -26,7 +26,8 @@ namespace testns
   public class testc
   {
     public static void Main(string[] args)
-    {   
+    {
+      Console.Title = "Console App";
       Console.WriteLine("Hello World !");
       Console.ReadLine();
     }
