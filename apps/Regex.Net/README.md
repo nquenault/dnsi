@@ -1,1 +1,1 @@
-[Run it](dnsi://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/index.dnsi)
+<a href="dnsi://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/index.dnsi">Run it !</a> (<a> href="dnsidbg://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/index.dnsi">with debug</a>)
