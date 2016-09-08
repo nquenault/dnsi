@@ -55,25 +55,25 @@ Public Class frmMain
       catch
       end try
 
-		GetImageByUri("https://github.com/nquenault/dnsi/raw/master/apps/Regex.Net/Resources/lighton.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lighton.PNG",
 			sub(image as image)
 				m_lighton = image
 			End sub
 		)
 
-		GetImageByUri("https://github.com/nquenault/dnsi/raw/master/apps/Regex.Net/Resources/lightoff.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lightoff.PNG",
 			sub(image as image)
 				m_lightoff = image
 			End sub
 		)
 
-		GetImageByUri("https://github.com/nquenault/dnsi/raw/master/apps/Regex.Net/Resources/lightbroken.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lightbroken.PNG",
 			sub(image as image)
 				m_lightbroken = image
 			End sub
 		)
 
-		GetImageByUri("https://github.com/nquenault/dnsi/raw/master/apps/Regex.Net/Resources/lightbrokenb.PNG",
+		GetImageByUri("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/Regex.Net/Resources/lightbrokenb.PNG",
 			sub(image as image)
 				m_lightbrokenb = image
 			End sub
