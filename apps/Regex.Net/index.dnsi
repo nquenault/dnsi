@@ -4,9 +4,9 @@
 '	<autorun value="true" />
 '	<entrypoint value="frmMain" />
 '	<showsource value="false" />
-'	<shortcut icon="./icons/regex.ico" />
-'	<shortcut target="desktop" value="Regex.Net Online" />
-'	<shortcut target="startmenu" value="Regex.Net/Regex.Net Online" />
+'	<!--<shortcut icon="./icons/regex.ico" />-->
+'	<!--<shortcut target="desktop" value="Regex.Net Online" />-->
+'	<!--<shortcut target="startmenu" value="Regex.Net/Regex.Net Online" />-->
 '	<!--<link src="./MyProject/Application.Designer.vb" />-->
 '	<link src="./MyProject/AssemblyInfo.vb" />
 '	<link src="./MyProject/Resources.Designer.vb" />
