@@ -4,9 +4,12 @@ Current version : 0.2.2 (sept 10th 2016)
 
 Download Link : http://nqs.fr/ehhQo6UHKj
 
+[Run dnsi AppStore](http://x.nqs.fr/?u=http://rawgitn.nqs.fr/dnsi/master/apps/AppStore/)
 [.Net Online Compiler](http://dnsi.nquenault.fr/dnsi-vs/)
 
-[Run dnsi AppStore](http://x.nqs.fr/?u=http://rawgitn.nqs.fr/dnsi/master/apps/AppStore/)
+Some apps dnsi-compatible :
+* [YouTube Embed Player](https://github.com/nquenault/youtube-embed-player)
+* [Regex.Net](https://github.com/nquenault/dnsi/tree/master/apps/Regex.Net)
 
 **What is DNSI ?**
 
