@@ -1,6 +1,6 @@
 # .NET Script Interpreter
 
-Current version : 0.2.3 (sept 10th 2016)
+Current version : 0.2.4 (sept 12th 2016)
 
 Download Link : http://nqs.fr/ehhQo6UHKj
 
