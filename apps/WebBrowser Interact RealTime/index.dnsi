@@ -3,7 +3,7 @@
 '	<target value="winexe" />
 '	<autorun value="true" />
 '	<entrypoint value="Program" />
-'	<link src="https://github.com/nquenault/dnsi/tree/master/libraries/Alchemy/index.dnsi" />
+'	<link src="https://github.com/nquenault/dnsi/raw/master/libraries/Alchemy/index.dnsi" />
 '</dnsi>
 '-------------------------------------------
 
