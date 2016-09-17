@@ -1,7 +1,6 @@
 # .NET Script Interpreter
 
 Current version : 1.0 (sept 17th 2016)<br />
-[changelog](https://github.com/nquenault/dnsi/blob/master/CHANGELOG.md)
 
 Download Link : http://nqs.fr/ehhQo6UHKj
 
