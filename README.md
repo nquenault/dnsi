@@ -21,7 +21,7 @@ DNSI is a application that can compile files from various locations (local, netw
 
 2) There is **no need to (re)compile** your software and **no need to make update patch**.
 
-3) If you put your source code on the web, there is **no need for user to download any exe** but DNSI (currently ~350Ko).
+3) If you put your source code on the web, there is **no need for user to download any exe** but DNSI (currently ~450Ko).
 
 4) Final user is **always up to date** with your software.
 
