@@ -55,7 +55,7 @@ namespace dnsi_AppStore
             Application.EnableVisualStyles();
             InitializeComponent();
 
-            this.Text = "dnsi - AppStore v0.0.2";
+            this.Text = "dnsi - AppStore v0.0.3";
             this.Resize += delegate { ResizeCol(); };
             this.Load += delegate { ResizeCol(); };
             listView1.MouseDoubleClick += delegate { runToolStripMenuItem_Click(null, null); };
@@ -68,7 +68,7 @@ namespace dnsi_AppStore
             {
                 var html = ws.DownloadString("https://raw.githubusercontent.com/nquenault/dnsi/master/apps/dnsi.repo");
 
-                var matches = Regex.Matches(html, "^([^#][^=]+)=(.+)", RegexOptions.Multiline);
+                var matches = Regex.Matches(html, "^(?![#\r\n])([^=]+)=([^\r\n#]+)", RegexOptions.Multiline);
 
                 foreach (Match match in matches)
                 {
