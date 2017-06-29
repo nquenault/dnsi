@@ -3,4 +3,5 @@ Regex.Net=https://raw.githubusercontent.com/nquenault/regex.net/master/index.dns
 #WebBrowser Interact RealTime=https://github.com/nquenault/dnsi/tree/master/apps/WebBrowser%20Interact%20RealTime/
 Internet Host Searcher=https://github.com/nquenault/dnsi/tree/master/apps/InternetHostSearcher/
 Console Test=https://github.com/nquenault/dnsi/tree/master/apps/ConsoleTest/
-ProxyMe=https://raw.githubusercontent.com/nquenault/proxyme/master/index.dnsi
+
+#ProxyMe=https://raw.githubusercontent.com/nquenault/proxyme/master/index.dnsi # Has some bug with
