@@ -16,7 +16,8 @@ namespace dnsi_AppStore
         {
             get {
                 if (listView1.SelectedItems.Count > 0)
-                    return Regex.Replace(listView1.SelectedItems[0].SubItems[1].Text, @"^(https?://)(www\.)?github\.com/([^/]+)/([^/]+)/tree/(.+)", "dnsi://github.com/$3/$4/raw/$5/index.dnsi");
+                    //return Regex.Replace(listView1.SelectedItems[0].SubItems[1].Text, @"^(https?://)(www\.)?github\.com/([^/]+)/([^/]+)/tree/(.+)", "dnsi://github.com/$3/$4/raw/$5/index.dnsi");
+                    return Regex.Replace(listView1.SelectedItems[0].SubItems[1].Text, @"^https?://", "dnsi://");
                 else
                     return "";
             }
